@@ -15,6 +15,12 @@ namespace API.Data
             var users = JsonSerializer.Deserialize<List<AppUser>>(userData);
             if (users == null) return;
 
+            foreach (var user in users)
+            {
+                var photo = user.Photos.FirstOrDefault();
+                photo.IsApproved = true;
+            }
+
             var roles = new List<AppRole>
             {
                 new AppRole{Name = "Member"},

@@ -1,0 +1,31 @@
+<!-- <div class="card mb-4">
+    <div class="card-img-wrapper">
+        <img src="{{photo.url}}" alt="{{photo.username | titlecase}}" class="card-img-top">
+        <ul class="list-inline member-icons animate text-center">
+            <li class="list-inline-item"><button (click)="approvePhoto(photo.id)"  class="btn btn-primary">
+                Approve</button></li>
+            <li class="list-inline-item"><button (click)="rejectPhoto(photo.id)" class="btn btn-warning">
+                Reject</button></li>
+        </ul>
+    </div>
+    <div class="card-body p-1">
+        <h6 class="card-title text-center mb-1">
+            {{photo.username}}
+        </h6>
+    </div>
+</div> -->
+
+<div class="row">
+    <div class="text-center ml-1">
+        <h5 class="text-left ml-3">{{photo.username | titlecase}}</h5>
+        <img src="{{photo.url}}" alt="{{photo.username | titlecase}}" class="img-thumbnail p-1">
+        <div class="text-center" style="display: inline;">
+            <button
+                (click)="approvePhoto(photo.id)"
+                class="btn btn-success btn-sm">Approve</button>
+            <button
+                (click)="rejectPhoto(photo.id)"
+                class="btn btn-sm btn-danger">Reject</button>
+        </div>
+    </div>
+</div>
